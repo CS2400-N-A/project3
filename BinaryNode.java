@@ -43,7 +43,7 @@ class BinaryNode<T>
       return leftChild;
    } // end getLeftChild
 
-   /** Sets this node’s left child to a given node.
+   /** Sets this nodeï¿½s left child to a given node.
        @param newLeftChild  A node that will be the left child. */
    public void setLeftChild(BinaryNode<T> newLeftChild)
    {
@@ -64,7 +64,7 @@ class BinaryNode<T>
       return rightChild;
    } // end getRightChild
    
-   /** Sets this node’s right child to a given node.
+   /** Sets this nodeï¿½s right child to a given node.
     @param newRightChild  A node that will be the right child. */
    public void setRightChild(BinaryNode<T> newRightChild)
    {
@@ -106,6 +106,17 @@ class BinaryNode<T>
     * prints (using post-order traversal) all nodes of the subtree rooted at "this" node */
    public void postorderTraverse_binaryNodeMethod()
    {
+      String postordered = "";
+      if(hasLeftChild() == true) {
+         postorderTraverse_binaryNodeMethod();
+         postordered = postordered + " " + this.getData();
+      }
+      else if (hasRightChild() == true) {
+         postorderTraverse_binaryNodeMethod();
+         postordered = postordered + " " + this.getData();
+      }
+      postordered = postordered + this.getData();
+      System.out.println(postordered);
    }
    
    /**-------------------------------------------------------------------- 
@@ -114,8 +125,17 @@ class BinaryNode<T>
     * Computes the height of the subtree rooted at "this" node.
    @return  The height of the subtree rooted at "this" node. */
    public int getHeight_binaryNodeMethod()
-   {  
-	   return 0;
+   {
+      int leftc = 0;
+      int rightc = 0;
+      if ((hasLeftChild()) == true) {
+        leftc = leftChild.getHeight_binaryNodeMethod() + 1;
+        
+      }
+      else if ((hasRightChild()) == true); {
+         rightc =  rightChild.getHeight_binaryNodeMethod();         
+      }
+	   return max(leftc, rightc) + 1;
    } // end getHeight
    
    /** -------------------------------------------------------------------- */
