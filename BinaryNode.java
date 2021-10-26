@@ -135,7 +135,10 @@ class BinaryNode<T>
       else if ((hasRightChild()) == true); {
          rightc =  rightChild.getHeight_binaryNodeMethod();         
       }
-	   return max(leftc, rightc) + 1;
+	   if (leftc >= rightc)
+	      return leftc + 1;
+	   else
+	      return rightc + 1;
    } // end getHeight
    
    /** -------------------------------------------------------------------- */
