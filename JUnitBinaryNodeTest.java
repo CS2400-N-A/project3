@@ -6,6 +6,8 @@ public class JUnitBinaryNodeTest {
 
     @Test
     public static String findPostOrder(String tree) {
+        BinaryNode<String> chad = new BinaryNode()<String>();
+        
         assertEquals("a", (new BinaryNode<String> test).postorderTraverse_binaryNodeMethod())
     
     }
