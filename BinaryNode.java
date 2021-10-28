@@ -108,17 +108,16 @@ class BinaryNode<T>
    {
       String temp = "";
       if (this != null) {
-      if(hasLeftChild() == true) {
-      getPostorderTraverse_binaryNodeMethod(node.getLeftChild());
+         if(hasLeftChild() == true) {
+            getPostorderTraverse_binaryNodeMethod(node.getLeftChild());
+         }
+         if (hasRightChild() == true) {
+            getPostorderTraverse_binaryNodeMethod(node.getLeftChild());
+         }
+         temp = temp + this.getData();
       }
-      if (hasRightChild() == true) {
-      getPostorderTraverse_binaryNodeMethod(node.getLeftChild());
-      }
-      temp = temp + this.getData();
+      return temp;    
    }
-      return temp;
-      
-}
    public void postorderTraverse_binaryNodeMethod() {
       System.out.println(getPostorderTraverse_binaryNodeMethod(this));
    }
