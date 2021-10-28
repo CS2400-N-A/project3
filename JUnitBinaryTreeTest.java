@@ -4,17 +4,17 @@ import org.junit.Test;
 public class JUnitBinaryTreeTest {
 
     @Test
-    public void testPostOrder(){
+    public void testPostorder(){
         BinaryTree<String> tree = new BinaryTree<>();
         DriverBT.createTree2(tree);
         assertEquals("B F D G H E C A", tree.getPostorderTraverse(tree.getRootNode()));
     }
 
     @Test
-    public void testPostOrderBin(){
+    public void testPostorderBin(){
         BinaryTree<String> tree = new BinaryTree<>();
         DriverBT.createTree2(tree);
-        //assertEquals("a", (new BinaryNode<String> test).postorderTraverse_binaryNodeMethod())
+        assertEquals("B F D G H E C A", tree.getRootNode().getPostorderTraverse_binaryNodeMethod());
     
     }
 
