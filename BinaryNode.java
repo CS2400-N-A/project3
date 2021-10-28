@@ -109,13 +109,12 @@ class BinaryNode<T>
       String temp = "";
       if (this != null) {
       if(hasLeftChild() == true) {
-      getLeftChild().postorderTraverse_binaryNodeMethod();
+      getPostorderTraverse_binaryNodeMethod(node.getLeftChild());
       }
       if (hasRightChild() == true) {
-      getRightChild().postorderTraverse_binaryNodeMethod();
+      getPostorderTraverse_binaryNodeMethod(node.getLeftChild());
       }
       temp = temp + this.getData();
-
    }
       return temp;
       
@@ -137,9 +136,9 @@ class BinaryNode<T>
         leftc = leftChild.getHeight_binaryNodeMethod() + 1;
         
       }
-      else if ((hasRightChild()) == true); {
+      else if ((hasRightChild()) == true); 
          rightc =  rightChild.getHeight_binaryNodeMethod();         
-      }
+      
 	   if (leftc >= rightc)
 	      return leftc + 1;
 	   else

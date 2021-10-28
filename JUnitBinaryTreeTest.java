@@ -3,43 +3,43 @@ import org.junit.Test;
 
 public class JUnitBinaryTreeTest {
 
-    //@Test
+    @Test
     public void testPostOrder(){
         BinaryTree<String> tree = new BinaryTree<>();
         DriverBT.createTree2(tree);
+        assertEquals("B F D G H E C A", tree.getPostorderTraverse(tree.getRootNode()));
     }
 
-    //@Test
+    @Test
     public void testPostOrderBin(){
         BinaryTree<String> tree = new BinaryTree<>();
         DriverBT.createTree2(tree);
-        
         //assertEquals("a", (new BinaryNode<String> test).postorderTraverse_binaryNodeMethod())
     
     }
 
-    //@Test
+    @Test
     public void testTreeHeight(){
         BinaryTree<String> tree = new BinaryTree<>();
         DriverBT.createTree2(tree);
         assertEquals(4, tree.getHeight());
     }
 
-   // @Test
+    @Test
     public void testTreeHeightBin(){
         BinaryTree<String> tree = new BinaryTree<>();
         DriverBT.createTree2(tree);
         assertEquals(4, tree.getHeight_callBinaryNodeMethod());
     }
 
-    //@Test
+    @Test
     public void testNumOfNodes(){
         BinaryTree<String> tree = new BinaryTree<>();
         DriverBT.createTree2(tree);
         assertEquals(8, tree.getNumberOfNodes());
     }
 
-    //@Test
+    @Test
     public void testNumOfNodesBin(){
         BinaryTree<String> tree = new BinaryTree<>();
         DriverBT.createTree2(tree);
