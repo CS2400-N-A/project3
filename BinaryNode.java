@@ -109,10 +109,10 @@ class BinaryNode<T>
       String temp = "";
       if (this != null) {
          if(hasLeftChild() == true) {
-            temp += this.getLeftChild().getPostorderTraverse_binaryNodeMethod();
+            temp += this.getLeftChild().getPostorderTraverse_binaryNodeMethod() + " ";
          }
          if (hasRightChild() == true) {
-            temp += this.getRightChild().getPostorderTraverse_binaryNodeMethod();
+            temp += this.getRightChild().getPostorderTraverse_binaryNodeMethod() + " ";
          }
          temp = temp + this.getData();
       }
