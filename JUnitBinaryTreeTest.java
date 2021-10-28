@@ -7,6 +7,7 @@ public class JUnitBinaryTreeTest {
     public void testPostOrder(){
         BinaryTree<String> tree = new BinaryTree<>();
         DriverBT.createTree2(tree);
+        assertEquals("B F D G H E C A", tree.getPostorderTraverse(tree.getRootNode()));
     }
 
     @Test
