@@ -132,7 +132,7 @@ class BinaryNode<T>
       int leftc = 0;
       int rightc = 0;
       if ((hasLeftChild()) == true)
-        leftc = leftChild.getHeight_binaryNodeMethod() + 1;
+        leftc = leftChild.getHeight_binaryNodeMethod();
       else if ((hasRightChild()) == true)
          rightc =  rightChild.getHeight_binaryNodeMethod();         
    
