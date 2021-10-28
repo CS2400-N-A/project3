@@ -152,7 +152,7 @@ class BinaryNode<T>
 	  int rightNumber = 0;
 	  if (leftChild != null)
 	     leftNumber = leftChild.getNumberOfNodes_binaryNodeMethod();
-	  else if (rightChild != null)
+	  if (rightChild != null)
 	     rightNumber = rightChild.getNumberOfNodes_binaryNodeMethod();
 	  return 1 + leftNumber + rightNumber;
 	} // end getNumberOfNodes
